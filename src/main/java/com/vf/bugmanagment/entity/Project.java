@@ -22,7 +22,7 @@ public class Project extends BaseEntity{
     private String projectName;
 
     @Column(name="project_code")
-    private String projecCode;
+    private String projectCode;
 
 
     @JoinColumn(name = "manager_user_id")
