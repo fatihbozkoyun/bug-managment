@@ -79,7 +79,7 @@ public BugDetailDto update(Long id, BugUpdateDto bug){
 
 }
 
-    private BugDetailDto getByIdWithDetails(Long id) {
+    public BugDetailDto getByIdWithDetails(Long id) {
         Bug bug = bugRepository.getOne(id);
         BugDetailDto detailDto = modelMapper.map(bug, BugDetailDto.class);
         List<BugHistoryDto> issueHistoryDtos = bugHistoryServices.getByBugHistoryId(bug.getId());
@@ -114,6 +114,8 @@ public BugDetailDto update(Long id, BugUpdateDto bug){
     public BugDto update(Long id, BugDto bugDto) {
         return null;
     }
+
+
 }
 
 

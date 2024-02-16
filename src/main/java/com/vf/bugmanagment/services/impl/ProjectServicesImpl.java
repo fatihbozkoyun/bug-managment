@@ -78,8 +78,8 @@ public class ProjectServicesImpl implements ProjectServices {
     }
 
     @Override
-    public Boolean delete(ProjectDto projectDto) {
-      projectRepository.deleteById(projectDto.getId());
+    public Boolean delete(Long id) {
+      projectRepository.deleteById(id);
       return Boolean.TRUE;
     }
 
@@ -100,4 +100,9 @@ public class ProjectServicesImpl implements ProjectServices {
         projectRepository.save(projectDb);
         return modelMapper.map(projectDb, ProjectDto.class);
     }
+    public List<ProjectDto> getAll() {
+        List<Project> data = projectRepository.findAll();
+        return Arrays.asList(modelMapper.map(data, ProjectDto[].class));
+    }
 }
+

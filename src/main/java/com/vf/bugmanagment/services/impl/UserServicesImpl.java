@@ -12,6 +12,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
+import java.util.List;
 
 @Service
 public class UserServicesImpl implements UserServices {
@@ -54,6 +55,11 @@ public class UserServicesImpl implements UserServices {
     public UserDto getByUsername(String username) {
         User u = userRepository.findByUserName(username);
         return modelMapper.map(u, UserDto.class);
+    }
+
+    public List<UserDto> getAll(){
+        List<User> data=userRepository.findAll();
+        return Arrays.asList(modelMapper.map(data,UserDto[].class));
     }
 
 }
