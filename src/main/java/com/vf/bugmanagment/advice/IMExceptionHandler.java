@@ -1,8 +1,5 @@
-package com.vf.bugmanagment.config;
+package com.vf.bugmanagment.advice;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

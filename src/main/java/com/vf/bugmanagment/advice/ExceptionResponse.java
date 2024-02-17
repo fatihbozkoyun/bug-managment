@@ -1,9 +1,8 @@
-package com.vf.bugmanagment.config;
+package com.vf.bugmanagment.advice;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.AnyKeyJavaClass;
 
 import java.util.Date;
 
